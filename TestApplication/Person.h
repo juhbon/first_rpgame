@@ -1,4 +1,6 @@
-#pragma once // used for including this file to another once
+#ifndef PERSON_H
+#define PERSON_H
+
 #include <string>
 
 class Person
@@ -55,3 +57,4 @@ public:
 	virtual ~Person();
 };
 
+#endif PERSON_H

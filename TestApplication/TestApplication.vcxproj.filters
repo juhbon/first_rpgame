@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Specimens">
+      <UniqueIdentifier>{ad360d6a-6d1b-485c-a8b5-bd26fc8bc7c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -22,13 +25,13 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Person.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Warrior.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Исходные файлы\Specimens</Filter>
     </ClInclude>
     <ClInclude Include="Paladin.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Исходные файлы\Specimens</Filter>
+    </ClInclude>
+    <ClInclude Include="Warrior.h">
+      <Filter>Исходные файлы\Specimens</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -38,14 +41,14 @@
     <ClCompile Include="TestApplication.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Paladin.cpp">
+      <Filter>Исходные файлы\Specimens</Filter>
+    </ClCompile>
     <ClCompile Include="Person.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Specimens</Filter>
     </ClCompile>
     <ClCompile Include="Warrior.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Paladin.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Specimens</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

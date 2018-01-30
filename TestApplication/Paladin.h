@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PALADIN_H
+#define PALADIN_H
+
 #include "Person.h"
 #include <string>
 class Paladin : public Person
@@ -15,3 +17,5 @@ public:
 	void classBonus();
 	~Paladin();
 };
+
+#endif PALADIN_H

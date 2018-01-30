@@ -1,4 +1,6 @@
-#pragma once
+#ifndef WARRIOR_H
+#define WARRIOR_H
+
 #include "Person.h"
 #include <string>
 class Warrior : public Person
@@ -16,3 +18,4 @@ public:
 	~Warrior();
 };
 
+#endif WARRIOR_H

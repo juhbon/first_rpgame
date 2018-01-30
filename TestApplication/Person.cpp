@@ -3,28 +3,28 @@
 #include <iostream>
 
 Person::Person() {}
-std::string Person::getName()					{	return name;							}
-int Person::getStrenght()						{	return strenght;						}
-int Person::getDefence()						{	return defence;						}
-int Person::getEndurance()						{	return endurance;						}
-int Person::getDexterity()						{	return dexterity;						}
+std::string Person::getName()					{	return name;								}
+int Person::getStrenght()						{	return strenght;							}
+int Person::getDefence()						{	return defence;								}
+int Person::getEndurance()						{	return endurance;							}
+int Person::getDexterity()						{	return dexterity;							}
 int Person::getIntelligence()					{	return this->intelligence;					}
 int Person::getDamage()							{	return this->damage;						}
 int Person::getProtection()						{	return this->protection;					}
 int Person::getHPmax()							{	return this->HPmax;							}
 int Person::getHP()								{	return this->HP;							}
-int Person::getDodge()							{	return this->dodge;				}
-int Person::getCritical()						{	return this->critical;			}
-int Person::gelLevel()							{	return this->level;				}
-int Person::getExp()							{	return this->exp;					}
-void Person::setClass(std::string Class)		{	this->classification = Class;		}
+int Person::getDodge()							{	return this->dodge;							}
+int Person::getCritical()						{	return this->critical;						}
+int Person::gelLevel()							{	return this->level;							}
+int Person::getExp()							{	return this->exp;							}
+void Person::setClass(std::string Class)		{	this->classification = Class;				}
 void Person::setName(std::string name)			{	this->name = name;							}
-void Person::setStrenght(int strenght)			{	this->strenght = strenght;		}
-void Person::setDefence(int defence)			{	this->defence = defence;			}
-void Person::setEndurance(int endurance)		{	this->endurance = endurance;		}
-void Person::setDexterity(int dexterity)		{	this->dexterity = dexterity;		}
-void Person::setIntelligence(int intelligence)	{	this->intelligence = intelligence;}
-void Person::addExp(int exp)					{	this->exp += exp;				}
+void Person::setStrenght(int strenght)			{	this->strenght = strenght;					}
+void Person::setDefence(int defence)			{	this->defence = defence;					}
+void Person::setEndurance(int endurance)		{	this->endurance = endurance;				}
+void Person::setDexterity(int dexterity)		{	this->dexterity = dexterity;				}
+void Person::setIntelligence(int intelligence)	{	this->intelligence = intelligence;			}
+void Person::addExp(int exp)					{	this->exp += exp;							}
 void Person::info()
 {
 	std::cout << "This is a " << this->name << ", "<<classification<<", with characteristics:";
