@@ -11,7 +11,7 @@ public:
 	void setProtection(int armor = 0);
 	void setWeaponDamage(int);
 	void setArmorProtection(int, int);
-	void setHPmax();
+	void setHPmax(int armorHP = 0);
 	void setDodge();
 	void setCritical();
 	void classBonus();

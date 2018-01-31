@@ -40,13 +40,13 @@ void Warrior::setArmorProtection(int defence, int addHP)
 {
 	int armorProtection = int(defence + defence * (getIntelligence() * 9 / 100));
 	Person::setProtection(getProtection() + armorProtection);
-	int armorHP = int(addHP + addHP * (getIntelligence() / 1.1 + getDexterity() / 1.3) / 10);
-	Person::setHPmax(getHPmax() + armorHP);
+	int armorHP = int(addHP + addHP * (getIntelligence() / 1.8 + getDexterity() / 2.4) / 10);
+	setHPmax(armorHP);
 }
 
-void Warrior::setHPmax()
+void Warrior::setHPmax(int armorHP)
 {
-	Person::setHPmax(getEndurance() * 10);
+	Person::setHPmax(getEndurance() * 10 + armorHP);
 	setHP(getHPmax());
 }
 
