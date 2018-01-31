@@ -2,9 +2,9 @@
 #include <iostream>
 #include "Paladin.h"
 
-Paladin::Paladin(std::string name, int strenght, int defence, int endurance, int dexterity, int intelligence)
+Paladin::Paladin(std::string& name, int& strenght, int& defence, int& endurance, int& dexterity, int& intelligence)
 {
-	setClass("paladin");
+	setClass("Paladin");
 	classBonus();
 	setName(name);
 	setStrenght(strenght);
@@ -19,38 +19,39 @@ Paladin::Paladin(std::string name, int strenght, int defence, int endurance, int
 	setCritical();
 }
 
-void Paladin::setDamage()
+void Paladin::setDamage(const int& weaponDamage)
 {
-	Person::setDamage(int(getStrenght() + getStrenght()*(getDexterity() * 12 / 100)));
+	Person::setDamage(int(getStrenght() + getStrenght()*(getDexterity() * 12 / 100)) + weaponDamage);
 }
 
-void Paladin::setProtection()
+void Paladin::setProtection(const int& armor)
 {
-	Person::setProtection(int(getDefence() + getDefence()*(getEndurance() * 12 / 100)));
+	Person::setProtection(int(getDefence() + getDefence()*(getEndurance() * 12 / 100)) + armor);
 }
 
-void Paladin::setWeaponDamage(int strenght)
+void Paladin::setWeaponDamage(const int& damage)
 {
-	int weaponDamage = int(strenght + strenght * (getIntelligence() * 16 / 100));
-	Person::setStrenght(getStrenght() + weaponDamage);
+	int weaponDamage = int(damage + damage * (getIntelligence() * 16 / 100));
+	Person::setDamage(weaponDamage);
 }
 
-void Paladin::setArmorProtection(int defence, int addHP)
+void Paladin::setArmorProtection(const int& defence, const int& addHP)
 {
 	int armorProtection = int(defence + defence * (getIntelligence() * 9 / 100));
 	Person::setProtection(getProtection() + armorProtection);
-	int armorHP = int(addHP + addHP * (getIntelligence() / 1.1 + getDexterity() / 1.3) / 10);
-	Person::setHPmax(getHPmax() + armorHP);
+	int armorHP = int(addHP + addHP * (getIntelligence() / 1.8 + getDexterity() / 2.4) / 10);
+	setHPmax(armorHP);
 }
 
-void Paladin::setHPmax()
+void Paladin::setHPmax(int armorHP)
 {
-	Person::setHPmax(getEndurance() * 10);
+	Person::setHPmax(getEndurance() * 10 + armorHP);
+	setHP(getHPmax());
 }
 
 void Paladin::classBonus()
 {
-	std::cout << "\nWarrior was chosen! +1 to all stats!\n";
+	std::cout << "\nPaladin was chosen! +1 to all stats!\n";
 	Person::setStrenght(getStrenght() + 1);
 	Person::setDefence(getDefence() + 1);
 	Person::setEndurance(getEndurance() + 1);
@@ -67,7 +68,15 @@ void Paladin::setCritical()
 {
 	Person::setCritical(int(getIntelligence() / 2.5 + getDexterity() / 2.5));
 }
-
+void Paladin::update()
+{
+	setDamage();
+	setProtection();
+	setHPmax();
+	setDodge();
+	setCritical();
+	setHPmax();
+}
 Paladin::~Paladin()
 {
 }

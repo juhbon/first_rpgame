@@ -2,8 +2,7 @@
 #include <iostream>
 #include "Warrior.h"
 
-
-Warrior::Warrior(std::string name, int strenght, int defence, int endurance, int dexterity, int intelligence)
+Warrior::Warrior(std::string& name, int& strenght, int& defence, int& endurance, int& dexterity, int& intelligence)
 {
 	setClass("warrior");
 	classBonus();
@@ -20,23 +19,23 @@ Warrior::Warrior(std::string name, int strenght, int defence, int endurance, int
 	setCritical();
 }
 
-void Warrior::setDamage(int weaponDamage)
+void Warrior::setDamage(const int& weaponDamage)
 {
 	Person::setDamage(int(getStrenght() + getStrenght()*(getDexterity() * 12 / 100)) + weaponDamage);
 }
 
-void Warrior::setProtection(int armor)
+void Warrior::setProtection(const int& armor)
 {
 	Person::setProtection(int(getDefence() + getDefence()*(getEndurance() * 12 / 100)) + armor);
 }
 
-void Warrior::setWeaponDamage(int strenght)
+void Warrior::setWeaponDamage(const int& damage)
 {
-	int weaponDamage = int(strenght + strenght * (getIntelligence() * 16 / 100));
+	int weaponDamage = int(damage + damage * (getIntelligence() * 16 / 100));
 	Person::setDamage(weaponDamage);
 }
 
-void Warrior::setArmorProtection(int defence, int addHP)
+void Warrior::setArmorProtection(const int& defence, const int& addHP)
 {
 	int armorProtection = int(defence + defence * (getIntelligence() * 9 / 100));
 	Person::setProtection(getProtection() + armorProtection);

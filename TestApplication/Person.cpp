@@ -3,29 +3,29 @@
 #include <iostream>
 
 Person::Person() {}
-std::string Person::getName()					{	return name;								}
-int Person::getStrenght()						{	return strenght;							}
-int Person::getDefence()						{	return defence;								}
-int Person::getEndurance()						{	return endurance;							}
-int Person::getDexterity()						{	return dexterity;							}
-int Person::getIntelligence()					{	return this->intelligence;					}
-int Person::getDamage()							{	return this->damage;						}
-int Person::getProtection()						{	return this->protection;					}
-int Person::getHPmax()							{	return this->HPmax;							}
-int Person::getHP()								{	return this->HP;							}
-int Person::getDodge()							{	return this->dodge;							}
-int Person::getCritical()						{	return this->critical;						}
-int Person::gelLevel()							{	return this->level;							}
-int Person::getExp()							{	return this->exp;							}
-void Person::setClass(std::string Class)		{	this->classification = Class;				}
-void Person::setName(std::string name)			{	this->name = name;							}
-void Person::setStrenght(int strenght)			{	this->strenght = strenght;					}
-void Person::setDefence(int defence)			{	this->defence = defence;					}
-void Person::setEndurance(int endurance)		{	this->endurance = endurance;				}
-void Person::setDexterity(int dexterity)		{	this->dexterity = dexterity;				}
-void Person::setIntelligence(int intelligence)	{	this->intelligence = intelligence;			}
-void Person::addExp(int exp)					{	this->exp += exp;							}
-void Person::info()
+std::string Person::getName()					const {	return name;								}
+int Person::getStrenght()						const {	return strenght;							}
+int Person::getDefence()						const {	return defence;								}
+int Person::getEndurance()						const {	return endurance;							}
+int Person::getDexterity()						const {	return dexterity;							}
+int Person::getIntelligence()					const {	return this->intelligence;					}
+int Person::getDamage()							const {	return this->damage;						}
+int Person::getProtection()						const {	return this->protection;					}
+int Person::getHPmax()							const {	return this->HPmax;							}
+int Person::getHP()								const {	return this->HP;							}
+int Person::getDodge()							const {	return this->dodge;							}
+int Person::getCritical()						const {	return this->critical;						}
+int Person::gelLevel()							const {	return this->level;							}
+int Person::getExp()							const {	return this->exp;							}
+void Person::setClass(const std::string& Class)			{	this->classification = Class;				}
+void Person::setName(const std::string& name)			{	this->name = name;							}
+void Person::setStrenght(const int& strenght)			{	this->strenght = strenght;					}
+void Person::setDefence(const int& defence)				{	this->defence = defence;					}
+void Person::setEndurance(const int& endurance)			{	this->endurance = endurance;				}
+void Person::setDexterity(const int& dexterity)			{	this->dexterity = dexterity;				}
+void Person::setIntelligence(const int& intelligence)	{	this->intelligence = intelligence;			}
+void Person::addExp(const int& exp)						{	this->exp += exp;							}
+void Person::info() const
 {
 	std::cout << "This is a " << this->name << ", "<<classification<<", with characteristics:";
 	std::cout << "\nStrenght = " << this->strenght;
@@ -42,7 +42,7 @@ void Person::info()
 	std::cout << "\nCurrent level = " << this->level;
 	std::cout << "\nCurrent experience = " << this->exp<<std::endl;
 }
-void Person::levelUp() 
+void Person::levelUp()
 {
 	if (this->exp >= this->explvl) {
 		this->explvl += this->explvl;
@@ -58,7 +58,7 @@ void Person::levelUp()
 			std::cin >> choise;
 			switch (choise) {
 			case 1: 
-				this->setStrenght(getDefence() + 1); 
+				this->setStrenght(getStrenght() + 1); 
 				points--;
 				break;
 			case 2: 
@@ -87,12 +87,14 @@ void Person::levelUp()
 		info();
 	}
 }
-void Person::setDamage(int damage) { this->damage = damage; }
-void Person::setProtection(int protection) { this->protection = protection; }
-void Person::setHPmax(int hp) { this->HPmax = hp; }
-void Person::setDodge(int dodge) { this->dodge = dodge; }
-void Person::setCritical(int critical) { this->critical = critical; }
-void Person::setHP(int HP) { this->HP = HP; }
-void Person::update() { }
+void Person::setDamage(const int& damage) { this->damage = damage; }
+void Person::setProtection(const int& protection) { this->protection = protection; }
+void Person::setHPmax(const int& hp) { this->HPmax = hp; }
+void Person::setDodge(const int& dodge) { this->dodge = dodge; }
+void Person::setCritical(const int& critical) { this->critical = critical; }
+void Person::setHP(const int& HP) { this->HP = HP; }
+void Person::setWeaponDamage(const int& damage) {}
+void Person::setArmorProtection(const int& defence, const int& addHP) {}
+void Person::update() {}
 void Person::classBonus() {}
 Person::~Person() {}
