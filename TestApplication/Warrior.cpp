@@ -20,12 +20,12 @@ Warrior::Warrior(std::string name, int strenght, int defence, int endurance, int
 	setCritical();
 }
 
-void Warrior::setDamage(int weaponDamage = 0)
+void Warrior::setDamage(int weaponDamage)
 {
 	Person::setDamage(int(getStrenght() + getStrenght()*(getDexterity() * 12 / 100)) + weaponDamage);
 }
 
-void Warrior::setProtection(int armor = 0)
+void Warrior::setProtection(int armor)
 {
 	Person::setProtection(int(getDefence() + getDefence()*(getEndurance() * 12 / 100)) + armor);
 }

@@ -7,8 +7,8 @@ class Warrior : public Person
 {
 public:
 	Warrior(std::string, int, int, int, int, int);
-	void setDamage(int);
-	void setProtection(int);
+	void setDamage(int weaponDamage = 0);
+	void setProtection(int armor = 0);
 	void setWeaponDamage(int);
 	void setArmorProtection(int, int);
 	void setHPmax();
