@@ -66,15 +66,15 @@ void Person::levelUp()
 				points--;
 				break;
 			case 3: 
-				this->endurance = this->endurance + 1;
+				this->setEndurance(getEndurance() + 1);
 				points--;
 				break;
 			case 4: 
-				this->dexterity = this->dexterity + 1; 
+				this->setDexterity(getDexterity() + 1); 
 				points--;
 				break;
 			case 5: 
-				this->intelligence = this->intelligence + 1; 
+				this->setIntelligence(getIntelligence() + 1); 
 				points--;
 				break;
 			default: 
@@ -83,6 +83,7 @@ void Person::levelUp()
 			}
 		}
 		this->level = this->level + 1;
+		update();
 		info();
 	}
 }
@@ -91,5 +92,7 @@ void Person::setProtection(int protection) { this->protection = protection; }
 void Person::setHPmax(int hp) { this->HPmax = hp; }
 void Person::setDodge(int dodge) { this->dodge = dodge; }
 void Person::setCritical(int critical) { this->critical = critical; }
+void Person::setHP(int HP) { this->HP = HP; }
+void Person::update() { }
 void Person::classBonus() {}
 Person::~Person() {}

@@ -53,6 +53,8 @@ public:
 	void setHPmax(int);
 	void setDodge(int);
 	void setCritical(int);
+	void setHP(int);
+	virtual void update();
 	virtual void classBonus();
 	virtual ~Person();
 };

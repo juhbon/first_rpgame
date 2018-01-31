@@ -7,14 +7,15 @@ class Warrior : public Person
 {
 public:
 	Warrior(std::string, int, int, int, int, int);
-	void setDamage();
-	void setProtection();
+	void setDamage(int);
+	void setProtection(int);
 	void setWeaponDamage(int);
 	void setArmorProtection(int, int);
 	void setHPmax();
 	void setDodge();
 	void setCritical();
 	void classBonus();
+	void update();
 	~Warrior();
 };
 
