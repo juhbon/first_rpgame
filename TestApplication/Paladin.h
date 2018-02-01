@@ -1,5 +1,5 @@
-#ifndef Paladin_H
-#define Paladin_H
+#ifndef PALADIN_H
+#define PALADIN_H
 
 #include "Person.h"
 #include <string>
@@ -19,4 +19,4 @@ public:
 	~Paladin();
 };
 
-#endif Paladin_H
+#endif PALADIN_H

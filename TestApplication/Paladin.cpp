@@ -66,7 +66,7 @@ void Paladin::setDodge()
 
 void Paladin::setCritical()
 {
-	Person::setCritical(int(getIntelligence() / 2.5 + getDexterity() / 2.5));
+	Person::setCritical(int(getIntelligence() / 1.5 + getDexterity() / 1.7));
 }
 void Paladin::update()
 {
