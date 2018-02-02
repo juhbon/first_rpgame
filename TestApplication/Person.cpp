@@ -27,72 +27,72 @@ void Person::setIntelligence(const int& intelligence)	{	this->intelligence = int
 void Person::addExp(const int& exp)						{	this->exp += exp;							}
 void Person::info() const
 {
-	std::cout << "This is a " << this->name << ", "<<classification<<", with characteristics:";
-	std::cout << "\nStrenght = " << this->strenght;
-	std::cout << "\nDefence = " << this->defence;
-	std::cout << "\nEndurance = " << this->endurance;
-	std::cout << "\nDexterity = " << this->dexterity;
-	std::cout << "\nIntelligence = " << this->intelligence;
-	std::cout << "\nDamage = " << this->damage;
-	std::cout << "\nProtection= " << this->protection;
-	std::cout << "\nHP max= " << this->HPmax;
-	std::cout << "\nHP current = " << this->HP;
-	std::cout << "\nDodge chance = " << this->dodge;
-	std::cout << "\nChance of crit hit = " << this->critical;
-	std::cout << "\nCurrent level = " << this->level;
-	std::cout << "\nCurrent experience = " << this->exp<<std::endl;
+    std::cout << "This is a " << name << ", "<<classification<<", with characteristics:";
+    std::cout << "\nStrenght = " << this->strenght;
+    std::cout << "\nDefence = " << this->defence;
+    std::cout << "\nEndurance = " << this->endurance;
+    std::cout << "\nDexterity = " << this->dexterity;
+    std::cout << "\nIntelligence = " << this->intelligence;
+    std::cout << "\nDamage = " << this->damage;
+    std::cout << "\nProtection= " << this->protection;
+    std::cout << "\nHP max= " << this->HPmax;
+    std::cout << "\nHP current = " << this->HP;
+    std::cout << "\nDodge chance = " << this->dodge;
+    std::cout << "\nChance of crit hit = " << this->critical;
+    std::cout << "\nCurrent level = " << this->level;
+    std::cout << "\nCurrent experience = " << this->exp<<std::endl;
 }
 void Person::levelUp()
 {
-	if (this->exp >= this->explvl) {
-		this->explvl += this->explvl;
-		int points = 10;
-		while (points > 0) {
-			std::cout << "You can add 1 point to any of characteristics:\n";
-			std::cout << "Strength - print 1\n";
-			std::cout << "Defence - print 2\n";
-			std::cout << "Endurance - print 3\n";
-			std::cout << "Dexterity - print 4\n";
-			std::cout << "Intelligence - print 5\n";
-			int choise;
-			std::cin >> choise;
-			switch (choise) {
-			case 1: 
-				this->setStrenght(getStrenght() + 1); 
-				points--;
-				break;
-			case 2: 
-				this->setDefence(getDefence() + 1);
-				points--;
-				break;
-			case 3: 
-				this->setEndurance(getEndurance() + 1);
-				points--;
-				break;
-			case 4: 
-				this->setDexterity(getDexterity() + 1); 
-				points--;
-				break;
-			case 5: 
-				this->setIntelligence(getIntelligence() + 1); 
-				points--;
-				break;
-			default: 
-				std::cout << "Choose one of the numbers!";
-				continue;
-			}
-		}
-		this->level = this->level + 1;
-		update();
-		info();
-	}
+    if (this->exp >= this->explvl) {
+        this->explvl += this->explvl;
+        int points = 10;
+        while (points > 0) {
+            std::cout << "You can add 1 point to any of characteristics:\n";
+            std::cout << "Strength - print 1\n";
+            std::cout << "Defence - print 2\n";
+            std::cout << "Endurance - print 3\n";
+            std::cout << "Dexterity - print 4\n";
+            std::cout << "Intelligence - print 5\n";
+            int choise;
+            std::cin >> choise;
+            switch (choise) {
+            case 1: 
+                this->setStrenght(getStrenght() + 1); 
+                points--;
+                break;
+            case 2: 
+                this->setDefence(getDefence() + 1);
+                points--;
+                break;
+            case 3: 
+                this->setEndurance(getEndurance() + 1);
+                points--;
+                break;
+            case 4: 
+                this->setDexterity(getDexterity() + 1); 
+                points--;
+                break;
+            case 5: 
+                this->setIntelligence(getIntelligence() + 1); 
+                points--;
+                break;
+            default: 
+                std::cout << "Choose one of the numbers!";
+                continue;
+            }
+        }
+        this->level = this->level + 1;
+        update();
+        info();
+    }
 }
-void Person::setDamage(const int& damage) { this->damage = damage; }
-void Person::setProtection(const int& protection) { this->protection = protection; }
-void Person::setHPmax(const int& hp) { this->HPmax = hp; }
-void Person::setDodge(const int& dodge) { this->dodge = dodge; }
-void Person::setCritical(const int& critical) { this->critical = critical; }
-void Person::setHP(const int& HP) { this->HP = HP; }
+void Person::setDamage(const int& damage) {}
+void Person::setProtection(const int& protection) {}
+void Person::setHPmax(const int& hp) {}
+void Person::setDodge(const int& dodge) {}
+void Person::setCritical(const int& critical) {}
+void Person::setHP(const int& HP) {}
 void Person::setWeaponDamage(const int& damage) {}
 void Person::setArmorProtection(const int& defence, const int& addHP) {}
 void Person::update() {}
