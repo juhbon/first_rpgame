@@ -4,78 +4,78 @@
 
 Warrior::Warrior(std::string& name, int& strenght, int& defence, int& endurance, int& dexterity, int& intelligence)
 {
-	setClass("warrior");
-	classBonus();
-	setName(name);
-	setStrenght(strenght);
-	setDefence(defence);
-	setEndurance(endurance);
-	setDexterity(dexterity);
-	setIntelligence(intelligence);
-	setDamage();
-	setProtection();
-	setHPmax();
-	setDodge();
-	setCritical();
+    setClass("warrior");
+    classBonus();
+	this->name = name;
+	this->strenght = strenght;
+	this->defence = defence;
+	this->endurance = endurance;
+	this->dexterity = dexterity;
+	this->intelligence = intelligence;
+    setDamage();
+    setProtection();
+    setHPmax();
+    setDodge();
+    setCritical();
 }
 
 void Warrior::setDamage(const int& weaponDamage)
 {
-	Person::setDamage(int(getStrenght() + getStrenght()*(getDexterity() * 12 / 100)) + weaponDamage);
+    damage = int(strenght + strenght * (dexterity* 12 / 100)) + weaponDamage;
 }
 
 void Warrior::setProtection(const int& armor)
 {
-	Person::setProtection(int(getDefence() + getDefence()*(getEndurance() * 12 / 100)) + armor);
+    protection = int(defence + defence * (endurance * 12 / 100)) + armor;
 }
 
-void Warrior::setWeaponDamage(const int& damage)
+void Warrior::setWeaponDamage(const int& weapondmg)
 {
-	int weaponDamage = int(damage + damage * (getIntelligence() * 16 / 100));
-	Person::setDamage(weaponDamage);
+    int weaponDamage = int(weapondmg + weapondmg * (intelligence * 16 / 100));
+    damage += weaponDamage;
 }
 
 void Warrior::setArmorProtection(const int& defence, const int& addHP)
 {
-	int armorProtection = int(defence + defence * (getIntelligence() * 9 / 100));
-	Person::setProtection(getProtection() + armorProtection);
-	int armorHP = int(addHP + addHP * (getIntelligence() / 1.8 + getDexterity() / 2.4) / 10);
+    int armorProtection = int(defence + defence * (intelligence * 9 / 100));
+    protection += armorProtection;
+    int armorHP = int(addHP + addHP * (intelligence / 1.8 + dexterity / 2.4) / 10);
 	setHPmax(armorHP);
 }
 
 void Warrior::setHPmax(int armorHP)
 {
-	Person::setHPmax(getEndurance() * 10 + armorHP);
-	setHP(getHPmax());
+    HPmax = endurance * 10 + armorHP;
+    HP = HPmax;
 }
 
 void Warrior::classBonus() 
 {
-	std::cout << "\nWarrior was chosen! +1 to all stats!\n";
-	Person::setStrenght(getStrenght() + 1);
-	Person::setDefence(getDefence() + 1);
-	Person::setEndurance(getEndurance() + 1);
-	Person::setDexterity(getDexterity() + 1);
-	Person::setIntelligence(getIntelligence() + 1);
+    std::cout << "\nWarrior was chosen! +1 to all stats!\n";
+    strenght++;
+    defence++;
+    endurance++;
+    dexterity++;
+    intelligence++;
 }
 
 void Warrior::setDodge()
 {
-	Person::setDodge(1 + getDexterity());
+    dodge = 1 + dexterity;
 }
 
 void Warrior::setCritical()
 {
-	Person::setCritical(int(getIntelligence() / 2.5 + getDexterity() / 2.5));
+    critical = int(intelligence / 2.5 + dexterity / 2.5);
 }
 void Warrior::update() 
 {
-	setDamage();
-	setProtection();
-	setHPmax();
-	setDodge();
-	setCritical();
-	setHPmax();
+    setDamage();
+    setProtection();
+    setHPmax();
+    setDodge();
+    setCritical();
+    setHPmax();
 }
 Warrior::~Warrior()
 {
