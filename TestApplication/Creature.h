@@ -1,9 +1,9 @@
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef CREATURE_H
+#define CREATURE_H
 
 #include <string>
 
-class Person
+class Creature
 {
 protected:
     std::string name;
@@ -23,7 +23,7 @@ protected:
         exp = 0,
         explvl = 100;
 public:
-    Person();
+	Creature();
     std::string getName() const;
     int getStrenght() const;
     int getDefence() const;
@@ -58,7 +58,7 @@ public:
     virtual void setArmorProtection(const int&, const int&);
     virtual void update();
     virtual void classBonus();
-    virtual ~Person();
+    virtual ~Creature();
 };
 
-#endif PERSON_H
+#endif CREATURE_H

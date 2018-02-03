@@ -1,9 +1,9 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
 
-#include "Person.h"
+#include "Creature.h"
 #include <string>
-class Warrior : public Person
+class Warrior : public Creature
 {
 public:
     Warrior(std::string&, int&, int&, int&, int&, int&);
