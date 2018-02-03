@@ -1,31 +1,31 @@
 #include "stdafx.h"
-#include "Person.h"
+#include "Creature.h"
 #include <iostream>
 
-Person::Person() {}
-std::string Person::getName()					const {	return name;								}
-int Person::getStrenght()						const {	return strenght;							}
-int Person::getDefence()						const {	return defence;								}
-int Person::getEndurance()						const {	return endurance;							}
-int Person::getDexterity()						const {	return dexterity;							}
-int Person::getIntelligence()					const {	return this->intelligence;					}
-int Person::getDamage()							const {	return this->damage;						}
-int Person::getProtection()						const {	return this->protection;					}
-int Person::getHPmax()							const {	return this->HPmax;							}
-int Person::getHP()								const {	return this->HP;							}
-int Person::getDodge()							const {	return this->dodge;							}
-int Person::getCritical()						const {	return this->critical;						}
-int Person::gelLevel()							const {	return this->level;							}
-int Person::getExp()							const {	return this->exp;							}
-void Person::setClass(const std::string& Class)			{	this->classification = Class;				}
-void Person::setName(const std::string& name)			{	this->name = name;							}
-void Person::setStrenght(const int& strenght)			{	this->strenght = strenght;					}
-void Person::setDefence(const int& defence)				{	this->defence = defence;					}
-void Person::setEndurance(const int& endurance)			{	this->endurance = endurance;				}
-void Person::setDexterity(const int& dexterity)			{	this->dexterity = dexterity;				}
-void Person::setIntelligence(const int& intelligence)	{	this->intelligence = intelligence;			}
-void Person::addExp(const int& exp)						{	this->exp += exp;							}
-void Person::info() const
+Creature::Creature() {}
+std::string Creature::getName()					const {	return name;								}
+int Creature::getStrenght()						const {	return strenght;							}
+int Creature::getDefence()						const {	return defence;								}
+int Creature::getEndurance()						const {	return endurance;							}
+int Creature::getDexterity()						const {	return dexterity;							}
+int Creature::getIntelligence()					const {	return this->intelligence;					}
+int Creature::getDamage()							const {	return this->damage;						}
+int Creature::getProtection()						const {	return this->protection;					}
+int Creature::getHPmax()							const {	return this->HPmax;							}
+int Creature::getHP()								const {	return this->HP;							}
+int Creature::getDodge()							const {	return this->dodge;							}
+int Creature::getCritical()						const {	return this->critical;						}
+int Creature::gelLevel()							const {	return this->level;							}
+int Creature::getExp()							const {	return this->exp;							}
+void Creature::setClass(const std::string& Class)			{	this->classification = Class;				}
+void Creature::setName(const std::string& name)			{	this->name = name;							}
+void Creature::setStrenght(const int& strenght)			{	this->strenght = strenght;					}
+void Creature::setDefence(const int& defence)				{	this->defence = defence;					}
+void Creature::setEndurance(const int& endurance)			{	this->endurance = endurance;				}
+void Creature::setDexterity(const int& dexterity)			{	this->dexterity = dexterity;				}
+void Creature::setIntelligence(const int& intelligence)	{	this->intelligence = intelligence;			}
+void Creature::addExp(const int& exp)						{	this->exp += exp;							}
+void Creature::info() const
 {
     std::cout << "This is a " << name << ", "<<classification<<", with characteristics:";
     std::cout << "\nStrenght = " << this->strenght;
@@ -42,7 +42,7 @@ void Person::info() const
     std::cout << "\nCurrent level = " << this->level;
     std::cout << "\nCurrent experience = " << this->exp<<std::endl;
 }
-void Person::levelUp()
+void Creature::levelUp()
 {
     if (this->exp >= this->explvl) {
         this->explvl += this->explvl;
@@ -87,14 +87,14 @@ void Person::levelUp()
         info();
     }
 }
-void Person::setDamage(const int& damage) {}
-void Person::setProtection(const int& protection) {}
-void Person::setHPmax(const int& hp) {}
-void Person::setDodge(const int& dodge) {}
-void Person::setCritical(const int& critical) {}
-void Person::setHP(const int& HP) {}
-void Person::setWeaponDamage(const int& damage) {}
-void Person::setArmorProtection(const int& defence, const int& addHP) {}
-void Person::update() {}
-void Person::classBonus() {}
-Person::~Person() {}
+void Creature::setDamage(const int& damage) {}
+void Creature::setProtection(const int& protection) {}
+void Creature::setHPmax(const int& hp) {}
+void Creature::setDodge(const int& dodge) {}
+void Creature::setCritical(const int& critical) {}
+void Creature::setHP(const int& HP) {}
+void Creature::setWeaponDamage(const int& damage) {}
+void Creature::setArmorProtection(const int& defence, const int& addHP) {}
+void Creature::update() {}
+void Creature::classBonus() {}
+Creature::~Creature() {}

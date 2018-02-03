@@ -1,9 +1,9 @@
 #ifndef PALADIN_H
 #define PALADIN_H
 
-#include "Person.h"
+#include "Creature.h"
 #include <string>
-class Paladin : public Person
+class Paladin : public Creature
 {
 public:
     Paladin(std::string&, int&, int&, int&, int&, int&);
