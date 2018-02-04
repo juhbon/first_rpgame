@@ -96,5 +96,4 @@ void Person::setHP(const int& HP) {}
 void Person::setWeaponDamage(const int& damage) {}
 void Person::setArmorProtection(const int& defence, const int& addHP) {}
 void Person::update() {}
-void Person::classBonus() {}
 Person::~Person() {}
