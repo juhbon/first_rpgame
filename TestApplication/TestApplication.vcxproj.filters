@@ -24,13 +24,13 @@
     <ClInclude Include="targetver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Person.h">
-      <Filter>Исходные файлы\Specimens</Filter>
-    </ClInclude>
     <ClInclude Include="Paladin.h">
       <Filter>Исходные файлы\Specimens</Filter>
     </ClInclude>
     <ClInclude Include="Warrior.h">
+      <Filter>Исходные файлы\Specimens</Filter>
+    </ClInclude>
+    <ClInclude Include="Creature.h">
       <Filter>Исходные файлы\Specimens</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,10 +44,10 @@
     <ClCompile Include="Paladin.cpp">
       <Filter>Исходные файлы\Specimens</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
+    <ClCompile Include="Warrior.cpp">
       <Filter>Исходные файлы\Specimens</Filter>
     </ClCompile>
-    <ClCompile Include="Warrior.cpp">
+    <ClCompile Include="Creature.cpp">
       <Filter>Исходные файлы\Specimens</Filter>
     </ClCompile>
   </ItemGroup>

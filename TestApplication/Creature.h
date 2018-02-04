@@ -58,7 +58,7 @@ public:
     virtual void setArmorProtection(const int&, const int&);
     virtual void update();
     virtual void classBonus();
-    virtual ~Person();
+    virtual ~Creature();
 };
 
 #endif CREATURE_H

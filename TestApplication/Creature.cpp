@@ -87,14 +87,14 @@ void Creature::levelUp()
         info();
     }
 }
-void Person::setDamage(const int& damage) {}
-void Person::setProtection(const int& protection) {}
-void Person::setHPmax(const int& hp) {}
-void Person::setDodge(const int& dodge) {}
-void Person::setCritical(const int& critical) {}
-void Person::setHP(const int& HP) {}
-void Person::setWeaponDamage(const int& damage) {}
-void Person::setArmorProtection(const int& defence, const int& addHP) {}
-void Person::update() {}
-void Person::classBonus() {}
-Person::~Person() {}
+void Creature::setDamage(const int& damage) {}
+void Creature::setProtection(const int& protection) {}
+void Creature::setHPmax(const int& hp) {}
+void Creature::setDodge(const int& dodge) {}
+void Creature::setCritical(const int& critical) {}
+void Creature::setHP(const int& HP) {}
+void Creature::setWeaponDamage(const int& damage) {}
+void Creature::setArmorProtection(const int& defence, const int& addHP) {}
+void Creature::update() {}
+void Creature::classBonus() {}
+Creature::~Creature() {}
