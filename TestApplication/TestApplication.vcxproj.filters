@@ -58,7 +58,7 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Bag.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Исходные файлы\Items\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +87,7 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Bag.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Items\Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
