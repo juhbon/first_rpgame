@@ -16,6 +16,21 @@
     <Filter Include="Исходные файлы\Specimens">
       <UniqueIdentifier>{ad360d6a-6d1b-485c-a8b5-bd26fc8bc7c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Items">
+      <UniqueIdentifier>{25969867-5001-4bf6-a5a2-c5f6446d885e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Specimens\Files">
+      <UniqueIdentifier>{7510b791-e8b3-45c9-9f53-a642da4dfecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Specimens\Headers">
+      <UniqueIdentifier>{f114e628-d8bf-4625-8cc5-26d45bdae0d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Items\Files">
+      <UniqueIdentifier>{bd38797d-915e-4359-ac1e-dff5d0711776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Items\Headers">
+      <UniqueIdentifier>{fa3cca66-efa3-438d-9f7b-b8875367cfd3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -24,14 +39,26 @@
     <ClInclude Include="targetver.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Creature.h">
+      <Filter>Исходные файлы\Specimens\Headers</Filter>
+    </ClInclude>
     <ClInclude Include="Paladin.h">
-      <Filter>Исходные файлы\Specimens</Filter>
+      <Filter>Исходные файлы\Specimens\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Warrior.h">
-      <Filter>Исходные файлы\Specimens</Filter>
+      <Filter>Исходные файлы\Specimens\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Creature.h">
-      <Filter>Исходные файлы\Specimens</Filter>
+    <ClInclude Include="IItem.h">
+      <Filter>Исходные файлы\Items\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Исходные файлы\Items\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="IInventory.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Bag.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -41,14 +68,26 @@
     <ClCompile Include="TestApplication.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Creature.cpp">
+      <Filter>Исходные файлы\Specimens\Files</Filter>
+    </ClCompile>
     <ClCompile Include="Paladin.cpp">
-      <Filter>Исходные файлы\Specimens</Filter>
+      <Filter>Исходные файлы\Specimens\Files</Filter>
     </ClCompile>
     <ClCompile Include="Warrior.cpp">
-      <Filter>Исходные файлы\Specimens</Filter>
+      <Filter>Исходные файлы\Specimens\Files</Filter>
     </ClCompile>
-    <ClCompile Include="Creature.cpp">
-      <Filter>Исходные файлы\Specimens</Filter>
+    <ClCompile Include="IItem.cpp">
+      <Filter>Исходные файлы\Items\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Исходные файлы\Items\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IInventory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Bag.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

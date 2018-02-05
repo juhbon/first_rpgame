@@ -57,7 +57,7 @@ public:
     virtual void setWeaponDamage(const int&);
     virtual void setArmorProtection(const int&, const int&);
     virtual void update();
-	virtual void setHPmax() = 0;
+	virtual void setHPmax(const int armorHP) = 0;
     virtual void classBonus() = 0;
     virtual ~Creature();
 };

@@ -147,13 +147,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bag.h" />
+    <ClInclude Include="IInventory.h" />
+    <ClInclude Include="IItem.h" />
     <ClInclude Include="Paladin.h" />
     <ClInclude Include="Creature.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Warrior.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bag.cpp" />
+    <ClCompile Include="IInventory.cpp" />
+    <ClCompile Include="IItem.cpp" />
     <ClCompile Include="Paladin.cpp" />
     <ClCompile Include="Creature.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -164,6 +171,7 @@
     </ClCompile>
     <ClCompile Include="TestApplication.cpp" />
     <ClCompile Include="Warrior.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
