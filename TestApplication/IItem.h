@@ -12,12 +12,13 @@ protected:
 public:
 	IItem();
 	std::string getName() const;
-	int getCost() const;
-	int getCondition() const;
-	void setName(const std::string& name);
-	void setCost(const int& cost);
-	void setCondition(const int& condition);
-	virtual std::string Info() = 0;
+
+	int     getCost()       const;
+	int     getCondition()  const;
+	void    setName(const std::string& name);
+	void    setCost(const int& cost);
+	void    setCondition(const int& condition);
+    virtual std::string Info() const { return "IItem..."; }
 	virtual ~IItem();
 };
 
