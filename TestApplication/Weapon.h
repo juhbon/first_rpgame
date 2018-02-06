@@ -3,17 +3,21 @@
 
 #include <string>
 #include "IItem.h"
+
 class Weapon : public IItem
 {
 protected:
 	int damage;
 	bool onehanded;
 public:
-	Weapon(const std::string& name, const  int& cost, const  int& condition, const  int& damage, const  bool& onehanded) : damage(damage), onehanded(onehanded) {};
-	int getDamage() const;
-	bool getOnehanded() const;
-	void setDamage(const int& damage);
-	void setOnehanded(const bool& onehanded);
+	Weapon(const std::string& name, const  int& cost, 
+           const  int& condition, const  int& damage, 
+           const  bool& onehanded);
+
+	int     getDamage()     const;
+	bool    getOnehanded()  const;
+	void    setDamage(const int& damage);
+	void    setOnehanded(const bool& onehanded);
 	virtual ~Weapon();
 };
 
