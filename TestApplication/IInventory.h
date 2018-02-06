@@ -5,12 +5,11 @@
 #include "IItem.h"
 #include <vector>
 #include <iterator>
-using namespace std;
+
 class IInventory
 {
 protected:
-	vector<IItem> items;
-	vector<IItem>::iterator iter;
+	std::vector<IItem> items;
 	int size = 0;
 public:
 	IInventory();
