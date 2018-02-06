@@ -24,20 +24,24 @@ protected:
         explvl = 100;
 public:
 	Creature();
-    std::string getName() const;
-    int getStrenght() const;
-    int getDefence() const;
-    int getEndurance() const;
-    int getDexterity() const;
-    int getIntelligence() const;
-    int getDamage() const;
-    int getProtection() const;
-    int getHPmax() const;
-    int getHP() const;
-    int getDodge() const;
-    int getCritical() const;
-    int gelLevel() const;
-    int getExp() const;
+    virtual ~Creature();
+
+    std::string getName()   const;
+    int getStrenght()       const;
+    int getDefence()        const;
+    int getEndurance()      const;
+    int getDexterity()      const;
+    int getIntelligence()   const;
+    int getDamage()         const;
+    int getProtection()     const;
+    int getHPmax()          const;
+    int getHP()             const;
+    int getDodge()          const;
+    int getCritical()       const;
+    int gelLevel()          const;
+    int getExp()            const;
+
+
     void setClass(const std::string&);
     void setName(const std::string&);
     void setStrenght(const int&);
@@ -45,9 +49,8 @@ public:
     void setEndurance(const int&);
     void setDexterity(const int&);
     void setIntelligence(const int&);
-    void addExp(const int&);
-    void info() const;
-    void levelUp();
+
+
     virtual void setDamage(const int&);
     virtual void setProtection(const int&);
     virtual void setHPmax(const int&);
@@ -56,10 +59,18 @@ public:
     virtual void setHP(const int&);
     virtual void setWeaponDamage(const int&);
     virtual void setArmorProtection(const int&, const int&);
+
+
+    virtual void setHPmax(const int armorHP) = 0;
+
+
+    void addExp(const int&);
+    void info() const;
+    void levelUp();
+
+
     virtual void update();
-	virtual void setHPmax(const int armorHP) = 0;
     virtual void classBonus() = 0;
-    virtual ~Creature();
 };
 
 #endif CREATURE_H
