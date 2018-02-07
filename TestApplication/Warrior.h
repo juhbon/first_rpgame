@@ -7,6 +7,8 @@ class Warrior : public Creature
 {
 public:
     Warrior(std::string&, int&, int&, int&, int&, int&);
+    ~Warrior();
+
     void setDamage(const int& weaponDamage = 0);
     void setProtection(const int& armor = 0);
     void setWeaponDamage(const int&);
@@ -14,9 +16,9 @@ public:
     void setHPmax(const int armorHP = 0);
     void setDodge();
     void setCritical();
+
     void classBonus();
     void update();
-    ~Warrior();
 };
 
 #endif WARRIOR_H
